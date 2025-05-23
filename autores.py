@@ -17,5 +17,12 @@ class Autor:
     
     def VerLibrosPorAutor(self):
         #Este metodo imprime los libros agregados al autor
-        for book in range(len(self.libros)):
-            print(f"{self.libros[book]}")
+        if not self.libros:
+            #Imprime un mensaje si no hay libros agregados
+            print(f"{self.apellidos} {self.nombres}")
+            print("No tiene libros agregados")
+        else:
+            #Imprime los libros agregados del autor
+            print(f"{self.apellidos} {self.nombres}")
+            for book in range(len(self.libros)):
+                print(f"{self.codigo} -> {self.libros[book]}")

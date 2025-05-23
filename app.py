@@ -38,11 +38,12 @@ def menu():
                     tipo = input("Ingese tipo de Libro: ")
                     libro1 = Libro(titulo, tipo)
                     autores[i].AgregarLibro(libro1)
-                else:
-                    continue
+                else: 
+                    pass
         elif opc == 4:
             for i in range(len(autores)):
-                print(f"{autores[i].VerLibrosPorAutor()}")
+                print(f"{autores[i].codigo}")
+                autores[i].VerLibrosPorAutor()
             input()
         elif opc == 0:
             on = False
